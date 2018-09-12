@@ -2,6 +2,7 @@ from cs50 import get_string
 from cs50 import sys
 
 
+
 if len (sys.argv) != 2:
     print ("Usage: python caesar.py key")
     # sys.exit (1)
@@ -28,10 +29,10 @@ for c in plaintext:
             c = c + 97
             c = chr(c)
             # print("chr c", c)
-        else:
-            print(c)
+    elif c.isspace():
+        # print(c, end="")
         ciphertext = c
-        sys.stdout.write(c)
+    sys.stdout.write(c)
 
 # for c in plaintext:
 #     # See if the char is punctuation.
